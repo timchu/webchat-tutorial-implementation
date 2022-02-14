@@ -30,13 +30,20 @@
         e.preventDefault();
         if (input.value){
           socket.emit('chat message', input.value);
+          var item = document.createElement('li');
+          item.textContent = "Me: " + input.value ;
+          messages.appendChild(item);
+          console.log("Sent")
+          window.scrollTo(0, document.body.scrollHeight);
           input.value = '';
         }
       });
       socket.on('chat message', function(msg) {
         var item = document.createElement('li');
-        item.textContent = msg;
+        item.textContent = "Them: " + msg;
         messages.appendChild(item);
+        messages.appendChild(item);
+        console.log("Received")
         window.scrollTo(0, document.body.scrollHeight);
       });
     </script>
