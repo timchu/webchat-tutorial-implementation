@@ -3,7 +3,7 @@ tutorial.
 
 run
 
-node index.js
+node server.js
 
 and visit localhost:3000. It's a web chatroom. You can test it out by
 opening two windows.
