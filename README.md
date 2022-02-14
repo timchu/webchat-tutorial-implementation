@@ -14,3 +14,5 @@ and if that errors, make sure to run
 > npm i socket.io
 
 > npm i http
+
+This assumes a working copy of npm and node installed.
